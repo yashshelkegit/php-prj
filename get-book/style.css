@@ -1,0 +1,20 @@
+:root{
+    --body-clr: rgb(248, 234, 209);
+    --head-clr: rgb(223, 39, 223);
+}
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background: var(--body-clr);
+}
+h1{
+    background: wheat;
+    color: var(--head-clr);
+    padding: .4rem;
+    text-align: center;
+}
