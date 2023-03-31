@@ -26,7 +26,7 @@
     </div>
     <div class="link">
         <img src="./images/book-shelf-50.png" alt="Logo">
-        <a href="#">Saved</a>
+        <a href="#">Manage</a>
     </div>
 </div>
 <div class="logout">

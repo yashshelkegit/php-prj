@@ -29,9 +29,17 @@
         if($_GET){
             $where = $_GET['search_by'];
             $value = $_GET['search'];
-
+            $value_arr = explode(" ", $value);
+            // var_dump($value_arr);
+            $str = '';
+            if(count($value_arr) >= 1 && $value_arr[0] != ''){
+                foreach($value_arr as $i){
+                    $str .= $i[0];
+                }
+            }
+            // echo($str);
             if($_GET['search_by']){
-                $sql = "SELECT * FROM books WHERE $where LIKE '%$value%'";
+                $sql = "SELECT * FROM books WHERE $where LIKE '%$value%' OR $where LIKE '$str%'";
             }
         }
         $result = mysqli_query($conn, $sql);

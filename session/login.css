@@ -1,0 +1,32 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    background-color: blanchedalmond;
+}
+.parent-form{
+    /* border: 1px solid; */
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    /* border: 1px solid; */
+    background: thistle;
+    padding: 1rem;
+}
+h1{
+    text-align: center;
+}
+input{
+    padding: .5rem;
+    margin: .5rem;
+    width: 20rem;
+}
+a{
+    display: block;
+    text-align: center;
+}

@@ -23,9 +23,6 @@ require '../includes/connect-db.php';
             echo "enter details";
         }
     }
-    else{
-        echo "no post";
-    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,12 +30,13 @@ require '../includes/connect-db.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="register.css">
     <title>Login</title>
 </head>
 <body>
-    <h1>Register Page</h1>
-    <div>
+    <div class="parent-form">
         <form action="register.php" method="post">
+            <h1>Register</h1>
             <div>
                 <input type="text" name="username" placeholder="Enter Username">
             </div>

@@ -80,7 +80,7 @@
         /* border: 1px solid; */
         padding: 1rem;
         width: 40vw;
-        background: #ffe694;
+        background: #b2f1f3;
     }
 
     .detail {
@@ -93,6 +93,7 @@
         color: #fff;
         margin: .5rem 0;
         padding: .5rem;
+        border-radius: 20px;
     }
 </style>
 
@@ -133,6 +134,7 @@
     $academic_year = $result['academic_year'];
     $location_owner = $result['location_owner'];
 
+    $program = $result['program'];
     $institute_name = $result['institute_name'];
     $institute_of = $result['institute_of'];
     $institute_type = $result['institute_type'];
@@ -148,7 +150,7 @@
 
     $owner_detail = "Here's your book from <b><u>$name</u></b>. Lives in <b><u>$location_owner</b></u>";
     $institute_detail = "Book is of <b><u>$institute_of</b></u> from <b><u>$institute_name</b></u> of type <b><u>$institute_type</b></u> under <b><u>$university</b></u> situated at $location_institute";
-    $book_detail = "<b><u>$book_name</b></u> is name of book subject is <b><u>$subject</b></u>. It is of <b><u>$scheme</b></u> scheme of academic year <b><u>$academic_year</b></u>. It was publishes on <b><u>$published_on</b></u>";
+    $book_detail = "<b><u>$book_name</b></u> is name of book subject is <b><u>$subject</b></u>. It is for <b><u>$program</u></b> of <b><u>$scheme</b></u> scheme of academic year <b><u>$academic_year</b></u>. It was publishes on <b><u>$published_on</b></u>";
     $book_price = "Original price of book is <b><u>$original_price</b></u> and selling price of book is <b><u>$selling_price</b></u>.";
     $discount = "You will get discount of rs. <b><u>" . $original_price - $selling_price . "</b></u>";
     $discount_percentage = round(($original_price - $selling_price) / $original_price * 100, 2);
