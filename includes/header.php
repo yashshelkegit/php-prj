@@ -30,7 +30,7 @@
     </div>
 </div>
 <div class="logout">
-    <form action="logout.php" method="POST">
+    <form action="./session/logout.php" method="POST">
         <button type="submit" name="logout">Logout</button>
     </form>
 </div>

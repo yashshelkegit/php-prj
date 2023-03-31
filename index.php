@@ -1,9 +1,9 @@
 <?php 
     require 'includes/connect-db.php';
-    $is_logged_in = true;
-    // echo "hello user";
-    if(!$is_logged_in){
-        header('location: login.php');
+    session_start();
+    if(!isset($_SESSION['user'])){
+        header('location: session/login.php');
+        exit;
     }
 
 ?>
