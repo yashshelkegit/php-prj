@@ -1,69 +1,93 @@
-:root{
-    --body-clr: rgb(248, 234, 209);
-    --head-clr: rgb(214, 36, 155);
-    --border-clr: rgb(214, 142, 33);
-    --text-clr: rgb(56, 56, 56);
-}
-
 *{
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
-    font-family: sans-serif;
-    letter-spacing: 2px;
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
-body{
-    background: var(--body-clr);
-}
-h1{
-    background: wheat;
-    color: var(--head-clr);
-    padding: .4rem;
-    text-align: center;
-    margin-bottom: 1rem;
-}
-.frm-div{
-    border: 1px solid;
-    display: flex;
-    justify-content: center;
-}
-.sidebar{
-    border: 1px solid rebeccapurple;
-    padding: 1rem;
-    color: var(--text-clr);
-}
-.sidebar p{
-    font-size: .9rem;
-    margin: 1rem 0 1rem 0;
-}
-.inp{
-    padding: 1rem;
-}
-.inp label{
-    display: block;
-    margin-bottom: .1rem;
-    transition: .3s;
-    font-weight: 600;
-    color: var(--text-clr);
-}
-.inp input{
-    width: 32rem;
-    padding: .2rem;
-    background: transparent;
-    border: none;
-    border-bottom: 2px solid var(--border-clr);
-    margin-bottom: .3rem;
-}
-.inp:hover label{
-    font-size: 1.2rem;
-} 
-
-.submit-btn {
-    padding: 1rem;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #c3e3e4;
+  color: #333333;
+  padding: .6rem;
 }
 
-.submit-inp{
-    padding: .5rem;
-    width: 32rem;
+.logo {
+  display: flex;
+  align-items: center;
+}
 
+.logo img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+}
+
+.links img{
+  width: 1.5rem;
+}
+
+.links a {
+  color: #333;
+  text-decoration: none;
+  margin: 0 1rem;
+}
+
+.links img{
+  height: 1rem;
+  width: 1rem;
+}
+
+.logout form {
+  display: inline-block;
+}
+
+.logout button {
+  border: 1px solid #333;
+  color: #333;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search{
+  background: gray;
+  padding: 1rem;
+  width: 60vw;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  border-radius: 50px;
+}
+
+.search input{
+  padding: .5rem;
+}
+.search select{
+  padding: .5rem;
+}
+
+.table{
+  margin: 2rem auto;
+
+}
+.table th{
+  width: 8rem;
+  padding: .6rem;
+  background-color: rgb(111, 112, 112);
+  color: #fff;
+}
+.table td{
+  text-align: center;
+  padding: .5rem;
+}
+tr:nth-child(even) {
+  background-color: #e1f5fa;
 }

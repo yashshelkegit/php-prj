@@ -1,0 +1,57 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background: rgb(243, 235, 243);
+}
+
+form{
+    max-width: 1300px;
+    margin: auto;
+}
+
+.inp{
+    /* border: 1px solid; */
+    padding: 1rem;
+    width: 25rem;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    background: rgb(211, 235, 250);
+}
+
+.inp input{
+    padding: .5rem;
+    width: 22rem;
+    margin-top: .5rem;
+}
+
+.inp .select-inp{
+    padding: .5rem;
+}
+
+.details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+h2{
+    background: rgb(217, 219, 221);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 10px;
+}
+
+.submit-box{
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+.submit-btn{
+    padding: 1rem;
+}

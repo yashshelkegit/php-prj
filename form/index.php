@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <script src="index.js"></script>
     <title>Document</title>
 </head>
+
 <body>
     <header class="header">
         <h1>Book Selling System</h1>
@@ -52,12 +54,13 @@
                     <label for="contact" class="">Contact No.</label>
                     <input type="text" id="contact" class="">
                 </div>
-                <div class="submit-btn"> 
+                <div class="submit-btn">
                     <input type="submit" value="Add Book" class="submit-inp">
                 </div>
             </form>
         </div>
-        
+
     </section>
 </body>
+
 </html>

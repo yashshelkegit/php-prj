@@ -1,0 +1,69 @@
+:root{
+    --body-clr: rgb(248, 234, 209);
+    --head-clr: rgb(214, 36, 155);
+    --border-clr: rgb(214, 142, 33);
+    --text-clr: rgb(56, 56, 56);
+}
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+}
+body{
+    background: var(--body-clr);
+}
+h1{
+    background: wheat;
+    color: var(--head-clr);
+    padding: .4rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.frm-div{
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+}
+.sidebar{
+    border: 1px solid rebeccapurple;
+    padding: 1rem;
+    color: var(--text-clr);
+}
+.sidebar p{
+    font-size: .9rem;
+    margin: 1rem 0 1rem 0;
+}
+.inp{
+    padding: 1rem;
+}
+.inp label{
+    display: block;
+    margin-bottom: .1rem;
+    transition: .3s;
+    font-weight: 600;
+    color: var(--text-clr);
+}
+.inp input{
+    width: 32rem;
+    padding: .2rem;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid var(--border-clr);
+    margin-bottom: .3rem;
+}
+.inp:hover label{
+    font-size: 1.2rem;
+} 
+
+.submit-btn {
+    padding: 1rem;
+}
+
+.submit-inp{
+    padding: .5rem;
+    width: 32rem;
+
+}
