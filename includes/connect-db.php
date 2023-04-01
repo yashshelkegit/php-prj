@@ -11,5 +11,3 @@
         exit();
     }
     // echo "Connected successfully";
-
-?>

@@ -1,6 +1,8 @@
 <link rel="stylesheet" href="add-page.css">
 <?php require "./includes/header.php" ?>
-
+<?php
+session_start()
+?>
 <form action="store-data.php" method="POST">
     <div class="form">
         <div class="books">
@@ -8,11 +10,11 @@
             <div class="details">
                 <div class="inp">
                     <label for="book_name">Enter book name *</label>
-                    <input type="text" name="book_name" id="book_name" placeholder="Enter book name *">
+                    <input type="text" name="book_name" id="book_name" placeholder="Enter book name *" require>
                 </div>
                 <div class="inp">
                     <label for="subject">Enter subject *</label>
-                    <input type="text" name="subject" id="subject" placeholder="Enter subject *">
+                    <input type="text" name="subject" id="subject" placeholder="Enter subject *" require>
                 </div>
 
                 <div class="inp">
@@ -42,15 +44,15 @@
             <div class="details">
                 <div class="inp">
                     <label for="name">Enter Name *</label>
-                    <input type="text" name="name" id="name" placeholder="Enter Name *">
+                    <input type="text" name="name" id="name" value="<?= $_SESSION['username']?>" placeholder="Enter Name *">
                 </div>
                 <div class="inp">
                     <label for="email">Enter e-mail *</label>
-                    <input type="text" name="email" id="email" placeholder="Enter e-mail *">
+                    <input type="text" name="email" id="email" value="<?= $_SESSION['email']?>" placeholder="Enter e-mail *">
                 </div>
                 <div class="inp">
                     <label for="location_owner">Enter Location(owner) *</label>
-                    <input type="text" name="location_owner" id="location_owner" placeholder="Enter Location(owner) *">
+                    <input type="text" name="location_owner" id="location_owner" placeholder="Enter Location(owner) *" require>
                 </div>
                 <div class="inp">
                     <label for="academic_year">Enter your academic year</label>
@@ -63,7 +65,7 @@
             <div class="details">
                 <div class="inp">
                     <label for="institute_of">Select Institute *</label>
-                    <select name="institute_of" id="institute_of" class="select-inp">
+                    <select name="institute_of" id="institute_of" class="select-inp" require>
                         <option value="B tech">B tech</option>
                         <option value="M tech`">M tech</option>
                         <option value="Diploma">Diploma</option>
@@ -79,7 +81,7 @@
                 </div>
                 <div class="inp">
                     <label for="institute_name">Enter institute name *</label>
-                    <input type="text" name="institute_name" id="institute_name" placeholder="Enter institute name *">
+                    <input type="text" name="institute_name" id="institute_name" placeholder="Enter institute name *" require>
                 </div>
                 <div class="inp">
                     <label for="institute_type">Select institute type *</label>

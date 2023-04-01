@@ -17,6 +17,12 @@
   display: flex;
   align-items: center;
 }
+@media (max-width: 715px){
+  .logo h1{
+    display: none;
+  }
+}
+
 
 .logo img {
   width: 50px;
@@ -28,20 +34,19 @@
   display: flex;
   justify-content: center;
 }
-
-.links img{
-  width: 1.5rem;
+.link{
+  margin: 0 1rem;
 }
 
 .links a {
   color: #333;
   text-decoration: none;
-  margin: 0 1rem;
+  margin: 0 1rem 0 0;
 }
 
 .links img{
-  height: 1rem;
-  width: 1rem;
+  /* height: 1rem; */
+  width: 1.2rem;
 }
 
 .logout form {
@@ -59,12 +64,18 @@
 .search{
   background: gray;
   padding: 1rem;
-  width: 60vw;
+  max-width: 60vw;
   margin: 1rem auto;
   display: flex;
   justify-content: center;
   color: #fff;
   border-radius: 50px;
+}
+@media (max-width: 990px){
+  .search{
+    max-width: 95vw;
+    border-radius: 10px;
+  }
 }
 
 .search input{
@@ -76,10 +87,11 @@
 
 .table{
   margin: 2rem auto;
-
+}
+.table tr{
+  overflow: auto;
 }
 .table th{
-  width: 8rem;
   padding: .6rem;
   background-color: rgb(111, 112, 112);
   color: #fff;
@@ -90,4 +102,10 @@
 }
 tr:nth-child(even) {
   background-color: #e1f5fa;
+}
+@media (max-width: 740px){
+  .table{
+    width: 50vw;
+    overflow: scroll;
+  }
 }

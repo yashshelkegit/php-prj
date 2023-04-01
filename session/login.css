@@ -2,9 +2,10 @@
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 body{
-    background-color: blanchedalmond;
+    background-color: rgb(231, 239, 241);
 }
 .parent-form{
     /* border: 1px solid; */

@@ -20,14 +20,15 @@ $published_on = date( 'Y', strtotime($_POST['published_on']));
 $original_price = $_POST['original_price'];
 $selling_price = $_POST['selling_price'];
 
-$sql = "INSERT INTO books ( name, email, academic_year, location_owner, institute_name, institute_of, institute_type, location_institute, university, program, book_name, subject, scheme, published_on, original_price, selling_price) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+session_start();
+$user_id = $_SESSION['user_id'];
+
+$sql = "INSERT INTO books ( name, email, academic_year, location_owner, institute_name, institute_of, institute_type, location_institute, university, program, book_name, subject, scheme, published_on, original_price, selling_price, user_id) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 $stmt = $conn->prepare($sql);
-$stmt->bind_param('ssssssssssssssdd', $name, $email, $academic_year, $location_owner, $institute_name, $institute_of, $institute_type, $location_institute, $university, $program, $book_name, $subject, $scheme, $published_on, $original_price, $selling_price);
+$stmt->bind_param('ssssssssssssssddi', $name, $email, $academic_year, $location_owner, $institute_name, $institute_of, $institute_type, $location_institute, $university, $program, $book_name, $subject, $scheme, $published_on, $original_price, $selling_price, $user_id);
 $stmt->execute();
 if(!$stmt->affected_rows > 0){
     echo $stmt->error;
 }else{
     header('location: index.php');
 }
-?>
-

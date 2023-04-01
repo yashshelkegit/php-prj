@@ -5,10 +5,6 @@
     font-family: sans-serif;
 }
 
-body{
-    background: rgb(243, 235, 243);
-}
-
 form{
     max-width: 1300px;
     margin: auto;
@@ -54,4 +50,8 @@ h2{
 
 .submit-btn{
     padding: 1rem;
+}
+.inp label{
+    font-size: 16px;
+    font-weight: bolder;
 }
