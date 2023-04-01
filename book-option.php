@@ -46,6 +46,9 @@
     .btn{
         text-decoration: none;
     }
+    button{
+        padding: .5rem;
+    }
 </style>
 
 
@@ -105,7 +108,7 @@ $discount_per = "Total <span><u>$discount_percentage%</u></span> discount";
             <p><?= $owner_detail ?></p>
         </div>
         <div class="contact detail">
-            <p>You can contact <?= "<span><u>$name</u></span>" ?> at <a href="mailto:<?= $email ?>"><?= $email ?></a></p>
+            <p>You can contact <?= "<span><u>$name</u></span>" ?> here <br><br> <a href="mailto:<?= $email ?>"><button><?= $email ?></button></a></p>
         </div>
     </div>
 </section>

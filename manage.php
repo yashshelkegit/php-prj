@@ -17,7 +17,6 @@ $result = mysqli_query($conn, $sql);
         color: green;
     }
 </style>
-
 <table class="table">
     <div class="head">
         <h2>Welcome <?= $username ?> ! manage your books here..</h2>

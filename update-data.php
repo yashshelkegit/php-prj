@@ -29,6 +29,7 @@ $stmt = $conn->prepare($sql);
 $stmt->bind_param('ssssssssssssssdd', $name, $email, $academic_year, $location_owner, $institute_name, $institute_of, $institute_type, $location_institute, $university, $program, $book_name, $subject, $scheme, $published_on, $original_price, $selling_price);
 $stmt->execute();
 if(!$stmt->affected_rows > 0){
+    header('location: manage.php');
     echo $stmt->error;
 }else{
     header('location: manage.php');
