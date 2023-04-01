@@ -9,9 +9,6 @@ $username = $_SESSION['username'];
 $sql = "SELECT * FROM books WHERE user_id = $user_id";
 $result = mysqli_query($conn, $sql);
 
-// while($row = mysqli_fetch_assoc($result)){
-//     var_dump($row);
-// }
 ?>
 <style>
     h2 {
@@ -20,6 +17,7 @@ $result = mysqli_query($conn, $sql);
         color: green;
     }
 </style>
+
 <table class="table">
     <div class="head">
         <h2>Welcome <?= $username ?> ! manage your books here..</h2>

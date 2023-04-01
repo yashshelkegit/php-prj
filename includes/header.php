@@ -18,15 +18,15 @@
         <div class="links">
             <div class="link">
                 <img src="./images/male-user-50.png" alt="Logo">
-                <a href="/php-project/index.php">Home</a>
+                <a href="/php-project/index.php"><b>Home</b></a>
             </div>
             <div class="link">
                 <img src="./images/add-book-50.png" alt="logo">
-                <a href="/php-project/add.php">Add Book</a>
+                <a href="/php-project/add.php"><b>Add Book</b></a>
             </div>
             <div class="link">
                 <img src="./images/book-shelf-50.png" alt="Logo">
-                <a href="/php-project/manage.php">Manage</a>
+                <a href="/php-project/manage.php"><b>Manage</b></a>
             </div>
         </div>
         <div class="logout">

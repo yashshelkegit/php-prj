@@ -24,14 +24,48 @@ if ($_POST) {
     }
 }
 ?>
+<style>
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.parent-form{
+    /* border: 1px solid; */
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    /* border: 1px solid; */
+    background: #fac3c4;
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px gray;
+}
+h1{
+    text-align: center;
+    color: rgb(56, 56, 56);
+}
+input{
+    padding: .5rem;
+    margin: .5rem;
+    width: 20rem;
+}
+a{
+    display: block;
+    text-align: center;
+    color: rgb(56, 56, 56);
+}
+</style>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="register.css">
     <title>Login</title>
 </head>
 

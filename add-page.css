@@ -16,7 +16,7 @@ form{
     width: 25rem;
     border-radius: 20px;
     margin-bottom: 1rem;
-    background: rgb(211, 235, 250);
+    background: #f6ffa1;
 }
 
 .inp input{
@@ -36,10 +36,8 @@ form{
 }
 
 h2{
-    background: rgb(217, 219, 221);
     padding: 1rem;
     margin: 1rem 0;
-    border-radius: 10px;
 }
 
 .submit-box{

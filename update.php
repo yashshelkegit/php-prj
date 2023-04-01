@@ -29,16 +29,19 @@ $selling_price = $result['selling_price'];
 ?>
 
 <style>
+body{
+    background-color: #fff;
+}
 h3{
-    background: #7a7a7a;
-    color: #fff;
+    background: #e2e3da;
     padding: 1rem;
     margin-top: 1rem;
     border-radius: 10px;
     display: inline-block;
 }
 h2{
-    background: #b3b1b1;
+    background: #fff;
+    border-bottom: 2px solid #676e1d;
     padding: 1rem;
     margin: 1rem 0;
     border-radius: 10px;
@@ -115,7 +118,7 @@ h2{
                     <label for="institute_of">Select Institute *</label>
                     <select name="institute_of" id="institute_of" value="<?= $institute_of?>" class="select-inp">
                         <option value="B tech" <?php if ($institute_of == 'B tech') echo 'selected'; ?>>B tech</option>
-                        <option value="M tech`" <?php if ($institute_of == 'M tech') echo 'selected'; ?>>M tech</option>
+                        <option value="M tech" <?php if ($institute_of == 'M tech') echo 'selected'; ?>>M tech</option>
                         <option value="Diploma" <?php if ($institute_of == 'Diploma') echo 'selected'; ?>>Diploma</option>
                         <option value="BSC" <?php if ($institute_of == 'BSC') echo 'selected'; ?>>BSC</option>
                         <option value="MSC" <?php if ($institute_of == 'MSC') echo 'selected'; ?>>MSC</option>

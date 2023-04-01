@@ -3,6 +3,25 @@
 <?php
 session_start()
 ?>
+<style>
+body{
+    background-color: #fff;
+}
+h2{
+    background: #fff;
+    border-bottom: 2px solid #676e1d;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 0;
+}
+.inp label{
+    font-size: 16px;
+    font-weight: bolder;
+}
+.inp{
+    background: #f6fcb6;
+}
+</style>
 <form action="store-data.php" method="POST">
     <div class="form">
         <div class="books">
@@ -10,7 +29,7 @@ session_start()
             <div class="details">
                 <div class="inp">
                     <label for="book_name">Enter book name *</label>
-                    <input type="text" name="book_name" id="book_name" placeholder="Enter book name *" require>
+                    <input type="text" name="book_name" id="book_name" placeholder="Enter book name *" required>
                 </div>
                 <div class="inp">
                     <label for="subject">Enter subject *</label>
@@ -52,7 +71,7 @@ session_start()
                 </div>
                 <div class="inp">
                     <label for="location_owner">Enter Location(owner) *</label>
-                    <input type="text" name="location_owner" id="location_owner" placeholder="Enter Location(owner) *" require>
+                    <input type="text" name="location_owner" id="location_owner" placeholder="Enter Location(owner) *" required>
                 </div>
                 <div class="inp">
                     <label for="academic_year">Enter your academic year</label>
@@ -65,7 +84,7 @@ session_start()
             <div class="details">
                 <div class="inp">
                     <label for="institute_of">Select Institute *</label>
-                    <select name="institute_of" id="institute_of" class="select-inp" require>
+                    <select name="institute_of" id="institute_of" class="select-inp" required>
                         <option value="B tech">B tech</option>
                         <option value="M tech`">M tech</option>
                         <option value="Diploma">Diploma</option>
@@ -81,7 +100,7 @@ session_start()
                 </div>
                 <div class="inp">
                     <label for="institute_name">Enter institute name *</label>
-                    <input type="text" name="institute_name" id="institute_name" placeholder="Enter institute name *" require>
+                    <input type="text" name="institute_name" id="institute_name" placeholder="Enter institute name *" required>
                 </div>
                 <div class="inp">
                     <label for="institute_type">Select institute type *</label>

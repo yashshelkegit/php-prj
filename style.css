@@ -43,6 +43,9 @@
   text-decoration: none;
   margin: 0 1rem 0 0;
 }
+.links a:hover{
+  border-bottom: 2px dashed rgb(58, 58, 58);
+}
 
 .links img{
   /* height: 1rem; */
@@ -62,13 +65,12 @@
 }
 
 .search{
-  background: gray;
-  padding: 1rem;
+  background: #fae3a3;
+  padding: .5rem;
   max-width: 60vw;
   margin: 1rem auto;
   display: flex;
   justify-content: center;
-  color: #fff;
   border-radius: 50px;
 }
 @media (max-width: 990px){
@@ -79,10 +81,10 @@
 }
 
 .search input{
-  padding: .5rem;
+  padding: .3rem;
 }
 .search select{
-  padding: .5rem;
+  padding: .3rem;
 }
 
 .table{

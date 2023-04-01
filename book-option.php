@@ -16,8 +16,9 @@
     .book {
         /* border: 1px solid; */
         padding: 1rem;
-        width: 40vw;
-        background: rgb(177, 221, 235);
+        width: 60vw;
+        background: #f6ffa1;
+        border-radius: 10px;
     }
 
     .detail {
@@ -26,8 +27,8 @@
     }
 
     h3 {
-        background: gray;
-        color: #fff;
+        background: #fff;
+        color: #333;
         margin: .5rem 0;
         padding: .5rem;
         border-radius: 10px;
@@ -35,6 +36,15 @@
 
     a {
         color: red;
+    }
+    p{
+        font-weight: 600;
+    }
+    span{
+        color: green;
+    }
+    .btn{
+        text-decoration: none;
     }
 </style>
 
@@ -64,16 +74,17 @@ $published_on = $result['published_on'];
 $original_price = $result['original_price'];
 $selling_price = $result['selling_price'];
 
-$owner_detail = "Here's your book from <b><u>$name</u></b>. Lives in <b><u>$location_owner</b></u>";
-$institute_detail = "Book is of <b><u>$institute_of</b></u> from <b><u>$institute_name</b></u> of type <b><u>$institute_type</b></u> under <b><u>$university</b></u> situated at <b><u>$location_institute</b></u>";
-$book_detail = "<b><u>$book_name</b></u> is name of book subject is <b><u>$subject</b></u>. It is for <b><u>$program</u></b> of <b><u>$scheme</b></u> scheme of academic year <b><u>$academic_year</b></u>. It was publishes on <b><u>$published_on</b></u>";
-$book_price = "Original price of book is <b><u>$original_price</b></u> and selling price of book is <b><u>$selling_price</b></u>.";
-$discount = "You will get discount of rs. <b><u>" . $original_price - $selling_price . "</b></u>";
+$owner_detail = "Here's your book from <span><u>$name</u></span>. Lives in <span><u>$location_owner</u></span>";
+$institute_detail = "Book is of <span><u>$institute_of</u></span> from <span><u>$institute_name</u></span> of type <span><u>$institute_type</u></span> under <span><u>$university</u></span> situated at <span><u>$location_institute</u></span>";
+$book_detail = "<span><u>$book_name</u></span> is name of book subject is <span><u>$subject</u></span>. It is for department of <span><u>$program</u></span> of <span><u>$scheme scheme</u></span> of academic year <span><u>$academic_year</u></span>. It was publishes on <span><u>$published_on</u></span>";
+$book_price = "Original price of book is <span><u>Rs.$original_price</u></span> and selling price of book is <span><u>Rs.$selling_price</u></span>.";
+$discount = "You will get discount of <span><u>Rs." . $original_price - $selling_price . "</u></span>";
 $discount_percentage = round(($original_price - $selling_price) / $original_price * 100, 2);
-$discount_per = "Total <b><u>$discount_percentage</b></u> % discount";
+$discount_per = "Total <span><u>$discount_percentage%</u></span> discount";
 ?>
 <section class="book-box">
     <div class="book">
+        <a href="go-back.php" class="btn"><b><<--</b></a>
         <div class=" detail">
             <h3>Book Details</h3>
             <p><?= $book_detail ?></p>
@@ -94,7 +105,7 @@ $discount_per = "Total <b><u>$discount_percentage</b></u> % discount";
             <p><?= $owner_detail ?></p>
         </div>
         <div class="contact detail">
-            <p>You can contact <?= "<b><u>$name</b></u>" ?> at <a href="mailto:<?= $email ?>"><?= $email ?></a></p>
+            <p>You can contact <?= "<span><u>$name</u></span>" ?> at <a href="mailto:<?= $email ?>"><?= $email ?></a></p>
         </div>
     </div>
 </section>
