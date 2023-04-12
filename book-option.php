@@ -5,50 +5,85 @@
 
 
 <style>
-    .book-box {
-        /* border: 1px solid; */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 80vh;
-    }
+.book-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f9f7f7;
+}
 
-    .book {
-        /* border: 1px solid; */
-        padding: 1rem;
-        width: 60vw;
-        background: #f6ffa1;
-        border-radius: 10px;
-    }
+.book {
+  padding: 1.5rem;
+  width: 70%;
+  background: #fff;
+}
 
-    .detail {
-        /* border: 1px solid red; */
-        margin: 1rem 0;
-    }
+.detail {
+  margin: 1.5rem 0;
+}
 
-    h3 {
-        background: #fff;
-        color: #333;
-        margin: .5rem 0;
-        padding: .5rem;
-        border-radius: 10px;
-    }
+h3 {
+  margin: 0;
+  padding: 1rem;
+  text-transform: uppercase;
+  border-bottom: 2px solid #333;
+  background-color: #edece8;
+  color: gray;
+}
 
-    a {
-        color: red;
-    }
-    p{
-        font-weight: 600;
-    }
-    span{
-        color: green;
-    }
-    .btn{
-        text-decoration: none;
-    }
-    button{
-        padding: .5rem;
-    }
+a {
+  color: #ff2d2d;
+  text-decoration: none;
+}
+
+p {
+  margin: 0.5rem 0;
+  font-weight: 600;
+  color: maroon;
+}
+
+span {
+  color: green;
+  font-weight: bold;
+}
+
+.btn {
+  display: inline-block;
+  background: red;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+button {
+  display: inline-block;
+  background: #2ecc71;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 820px){
+  .book{
+    width: 90%;
+  }
+}
+
 </style>
 
 
@@ -114,7 +149,6 @@ $discount_per = "Total <span><u>$discount_percentage%</u></span> discount";
 </section>
 
 <body>
-
     </html>
 
     <!-- <div class="book">

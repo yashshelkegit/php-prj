@@ -1,0 +1,94 @@
+.manage {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+
+.book {
+    display: flex;
+    flex-direction: column;
+}
+
+.book h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.info p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.price {
+    font-size: 1.2rem;
+    color: #06c;
+}
+
+.btns {
+    margin-left: 20px;
+}
+
+.btns a {
+    display: block;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.update-btn {
+    background-color: #4caf50;
+    margin-bottom: 10px;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    margin-bottom: 10px;
+}
+
+.more-btn {
+    background-color: #2196f3;
+}
+
+@media (max-width: 520px) {
+    .manage {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .btns {
+        margin-left: 0;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .update-btn, .delete-btn {
+        width: 75%;
+        margin: .3rem auto;
+    }
+    
+    .more-btn {
+        width: 75%;
+        margin: .3rem auto;
+    }
+}

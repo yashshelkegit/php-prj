@@ -3,25 +3,6 @@
 <?php
 session_start()
 ?>
-<style>
-body{
-    background-color: #fff;
-}
-h2{
-    background: #fff;
-    border-bottom: 2px solid #676e1d;
-    padding: 1rem;
-    margin: 1rem 0;
-    border-radius: 0;
-}
-.inp label{
-    font-size: 16px;
-    font-weight: bolder;
-}
-.inp{
-    background: #f6fcb6;
-}
-</style>
 <form action="store-data.php" method="POST">
     <div class="form">
         <div class="books">
@@ -58,7 +39,7 @@ h2{
                 </div>
             </div>
         </div>
-        <div class="personal">
+        <div class="books">
             <h2>Personal Details</h2>
             <div class="details">
                 <div class="inp">

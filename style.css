@@ -64,50 +64,108 @@
   cursor: pointer;
 }
 
-.search{
-  background: #fae3a3;
-  padding: .5rem;
-  max-width: 60vw;
-  margin: 1rem auto;
+.search-select{
+  padding: 7px;
+}
+.search {
   display: flex;
   justify-content: center;
-  border-radius: 50px;
-}
-@media (max-width: 990px){
-  .search{
-    max-width: 95vw;
-    border-radius: 10px;
-  }
+  background-color: #f2f2f2;
+  padding: 10px;
+  margin-top: 2rem;
 }
 
-.search input{
-  padding: .3rem;
-}
-.search select{
-  padding: .3rem;
+.search form {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
 }
 
-.table{
-  margin: 2rem auto;
+.search select,
+.search input[type="search"],
+.search input[type="submit"] {
+  margin-right: 10px;
 }
-.table tr{
-  overflow: auto;
+
+.search input[type="search"] {
+  width: 100%;
+  max-width: 300px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
 }
-.table th{
-  padding: .6rem;
-  background-color: rgb(111, 112, 112);
+
+.search input[type="submit"] {
+  background-color: #007bff;
   color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
 }
-.table td{
-  text-align: center;
-  padding: .5rem;
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: auto;
+  margin-top: 30px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+  overflow-x: auto;
 }
-tr:nth-child(even) {
-  background-color: #e1f5fa;
+
+.table th,
+.table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
 }
-@media (max-width: 740px){
-  .table{
-    width: 50vw;
-    overflow: scroll;
-  }
+
+.table th {
+  background-color: #eee;
+  font-weight: bold;
 }
+
+.table tr:hover {
+  background-color: #f5f5f5;
+}
+
+.a-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.a-btn:hover {
+  box-shadow: 3px 3px 15px gray;
+}
+.a-delete-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: red;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.a-delete-btn:hover {
+  box-shadow: 3px 3px 15px gray;
+}
+.a-update-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: yellow;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.a-update-btn:hover {
+  box-shadow: 3px 3px 15px gray;
+}
+
+

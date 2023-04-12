@@ -1,18 +1,13 @@
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="includes/table.css">
-<?php
-require 'includes/header.php';
-require 'includes/connect-db.php';
-session_start();
-// print_r($_SESSION);
-$user_id = $_SESSION['user_id'];
-$username = $_SESSION['username'];
-$sql = "SELECT * FROM books WHERE user_id = $user_id";
-$result = mysqli_query($conn, $sql);
-
-?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
 <style>
-.manage {
+    .manage {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -28,11 +23,9 @@ $result = mysqli_query($conn, $sql);
         flex-direction: column;
     }
     
-    .book h2 span {
+    .book h2 {
         font-size: 1.5rem;
         margin-bottom: 10px;
-        color: blue;
-        text-transform: capitalize;
     }
     
     .info {
@@ -99,31 +92,33 @@ $result = mysqli_query($conn, $sql);
         }
         
         .update-btn, .delete-btn {
-            width: 65%;
+            width: 75%;
             margin: .3rem auto;
         }
         
         .more-btn {
-            width: 65%;
+            width: 75%;
             margin: .3rem auto;
         }
     }
-</style>
 
-<?php while ($row = mysqli_fetch_assoc($result)) : ?>
+
+</style>
+<body>
     <div class="manage">
         <div class="book">
-            <h2>Name : <span><?= $row['book_name'] ?></span></h2>
+            <h2>Name : Book Name</h2>
             <div class="info">
-                <p>Location : <?= $row['location_owner'] ?></p>
-                <p>Program : <?= $row['program'] ?></p>
+                <p>Location : Jalgaon</p>
+                <p>Program : Information Technology</p>
             </div>
-            <p>Selling price : Rs.<?= $row['selling_price'] ?></p>
+            <p>Selling price : Rs.230</p>
         </div>
         <div class="btns">
-            <a href="update.php?id=<?= $row['id'] ?>" class="update-btn">Update</a>
-            <a href="delete-book.php?id=<?= $row['id'] ?>" class="delete-btn">Delete</a>
-            <a href="book-option.php?id=<?= $row['id'] ?>" class="more-btn">More</a>
+            <a href="#" class="update-btn">Update</a>
+            <a href="#" class="delete-btn">Delete</a>
+            <a href="#" class="more-btn">More</a>
         </div>
     </div>
-    <?php endwhile; ?>
+</body>
+</html>

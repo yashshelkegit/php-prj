@@ -8,10 +8,96 @@ if (!isset($_SESSION['user_id'])) {
 
 ?>
 <?php require 'includes/header.php' ?>
+<style>
+        .manage {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px;
+        padding: 20px;
+        background-color: #f8f8f8;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        border-radius: 5px;
+    }
+    
+    .book {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .book h2 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    
+    .info {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+    
+    .info p {
+        font-size: 0.9rem;
+        color: #666;
+        margin-bottom: 5px;
+    }
+    
+    .price {
+        font-size: 1.2rem;
+        color: #06c;
+    }
+    
+    .btns {
+        margin-left: 20px;
+    }
+    
+    .btns a {
+        display: block;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        text-align: center;
+        text-decoration: none;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+    }
+    
+    .more-btn {
+        background-color: #2196f3;
+    }
+    
+    @media (max-width: 520px) {
+        .manage {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .btns {
+            margin-left: 0;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+        }
+        
+        .update-btn, .delete-btn {
+            width: 75%;
+            margin: .3rem auto;
+        }
+        
+        .more-btn {
+            width: 75%;
+            margin: .3rem auto;
+        }
+    }
+</style>
 <div class="search">
     <form action="#" method="get">
-        <label for="search_by">Search By: </label>
-        <select name="search_by" id="search_by">
+        <select name="search_by" id="search_by" class="search-select">
+            <option value="">--Search By--</option>
             <option value="book_name">Book Name</option>
             <option value="program">Program</option>
             <option value="subject">subject</option>
@@ -44,32 +130,30 @@ if ($_GET) {
 }
 $result = mysqli_query($conn, $sql);
 if (!$result) {
-    echo "Result error: " . $conn->error;
+    echo "Result error: ";
     exit();
 }
 ?>
-<table class="table">
-    <tr>
-        <th>Book Name</th>
-        <th>Subject</th>
-        <th>Program</th>
-        <th>Location</th>
-        <th>University</th>
-        <th>Institute name</th>
-        <th>Selling price</th>
-        <th></th>
-    </tr>
-    <?php while ($row = mysqli_fetch_assoc($result)) : ?>
-        <tr>
-            <td><?= $row['book_name'] ?></td>
-            <td><?= $row['subject'] ?></td>
-            <td><?= $row['program'] ?></td>
-            <td><?= $row['location_owner'] ?></td>
-            <td><?= $row['university'] ?></td>
-            <td><?= $row['institute_name'] ?></td>
-            <td><?= $row['selling_price'] ?></td>
-            <td><a href="book-option.php?id=<?= $row['id'] ?>">More</a></td>
-        </tr>
+
+<?php while ($row = mysqli_fetch_assoc($result)) : ?>
+    <div class="manage">
+        <div class="book">
+            <h2>Name : <?= $row['book_name'] ?></h2>
+            <div class="info">
+                <p>Location(owner) : <?= $row['location_owner'] ?></p>
+                <p>Program : <?= $row['program'] ?></p>
+            </div>
+            <div class="info">
+                <p>Location(Institute) : <?= $row['location_institute'] ?></p>
+                <p>University : <?= $row['university'] ?></p>
+            </div>
+            <p>Selling price : Rs.<?= $row['selling_price'] ?></p>
+        </div>
+        <div class="btns">
+            <a href="book-option.php?id=<?= $row['id'] ?>" class="more-btn">More</a>
+        </div>
+    </div>
     <?php endwhile; ?>
-</table>
+
 <?php require 'includes/footer.php' ?>
+

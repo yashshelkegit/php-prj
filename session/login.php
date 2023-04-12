@@ -1,6 +1,6 @@
 <?php
 require '../includes/connect-db.php';
-
+$error_head = "";
 if ($_POST) {
     $username = $_POST['username'];
     $password = $_POST['password'];
@@ -17,10 +17,10 @@ if ($_POST) {
             header('location: /php-project/index.php');
         } else {
             // header('location: register.php');
-            echo "Login failed";
+            $error_head = "Login Failed";
         }
     } else {
-        echo "enter details";
+        $error_head = "Enter Details";
     }
 }
 ?>
@@ -31,34 +31,75 @@ if ($_POST) {
     box-sizing: border-box;
     font-family: sans-serif;
 }
-.parent-form{
-    /* border: 1px solid; */
-    height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.error-head {
+  font-size: 2rem;
+  color: red;
+  text-align: center;
+  margin-top: 2rem;
 }
-form{
-    /* border: 1px solid; */
-    background: #fac3c4;
-    padding: 1rem;
-    border-radius: 15px;
-    box-shadow: 5px 5px 15px gray;
+
+.parent-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
 }
-h1{
-    text-align: center;
-    color: rgb(56, 56, 56);
+
+.form {
+  align-items: center;
+  padding: 2rem;
+  background-color: lightgray;
+  border-radius: 10px;
+  width: 25vw;
 }
-input{
-    padding: .5rem;
-    margin: .5rem;
-    width: 20rem;
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #333;
+  text-align: center;
 }
-a{
-    display: block;
-    text-align: center;
-    color: rgb(56, 56, 56);
+
+input[type="text"],
+input[type="password"] {
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border-radius: 5px;
+  width: 100%;
+  border: none;
+  outline: none;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
+
+input[type="submit"] {
+  padding: 0.5rem;
+  margin: 1rem 0 0.5rem 0;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background-color: #0066cc;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+input[type="submit"]:hover {
+  background-color: #0052a3;
+}
+
+a {
+  display: block;
+  margin-top: 2rem;
+  color: #333;
+  text-decoration: none;
+  text-align: center;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 </style>
 <!DOCTYPE html>
 <html lang="en">
@@ -71,6 +112,7 @@ a{
 </head>
 
 <body>
+    <h2 class="error-head"><?= $error_head ?></h2>
     <div class="parent-form">
         <form action="login.php" method="post" class="form">
             <h1>Login Page</h1>
